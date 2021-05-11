@@ -4,7 +4,7 @@ trigger:
 pool:
   name: Default
   demands:
-   - agent.name -equals StivenPCAgent
+   - agent.name -equals StivenMacAgent
 
 steps:
 - script: echo Hello, world!
