@@ -20,12 +20,12 @@ stages:
     pool:
       name: Default
       demands:
-        - agent.name -equals StivenPCAgent
+        - agent.name -equals StivenMacAgent
     steps:
     - task: Docker@2
       displayName: Build an image
       inputs:
-        containerRegistry: 'DockerHubMayo'
+        containerRegistry: 'DockerHubAbril'
         repository: 'antony0618/simple-devops'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
@@ -49,7 +49,7 @@ stages:
     pool:
       name: Default
       demands:
-       - agent.name -equals StivenPCAgent
+       - agent.name -equals StivenMacAgent
     steps:
     - task: DownloadPipelineArtifact@2
       inputs:
