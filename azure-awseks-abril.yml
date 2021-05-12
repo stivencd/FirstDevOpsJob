@@ -26,7 +26,7 @@ stages:
       displayName: Build an image
       inputs:
         containerRegistry: 'DockerHubMayo'
-        repository: 'stivid007/simple-devops'
+        repository: 'antony0618/simple-devops'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: '$(tag)'
@@ -62,7 +62,7 @@ stages:
         action: 'deploy'
         kubernetesServiceConnection: 'AWS-EKS-TERRAFORM'
         manifests: '$(System.ArtifactsDirectory)/Devops.yaml'
-        containers: 'stivid007/simple-devops:$(tag)'
+        containers: 'antony0618/simple-devops:$(tag)'
         
 
 
